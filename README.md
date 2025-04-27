@@ -3,8 +3,8 @@
 Welcome to **Hacktify** — a safe and sandboxed vulnerable web application designed for **learning ethical hacking**, **practicing cybersecurity skills**, and **blue/red team exercises**.  
 This project simulates real-world security flaws in a controlled environment and is fully documented with a YouTube walkthrough!
 
-🎥 **YouTube video**: [[](https://bit.ly/4d0x5WQ)]  
-🔗 **GitHub Repo**: [This Repository]
+[🎥 **YouTube Channel**:
+](https://bit.ly/4d0x5WQ)
 
 ---
 
