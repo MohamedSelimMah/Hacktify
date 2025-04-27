@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Congratulations!</title>
+    <style>
+        body {
+            background-color: #1d1f27;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        .envelope {
+            position: relative;
+            width: 200px;
+            height: 120px;
+            background: #fff;
+            border: 2px solid #333;
+            border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        .envelope::before, .envelope::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .envelope::before {
+            top: 0;
+            left: 0;
+            border-width: 0 100px 60px 100px;
+            border-color: transparent transparent #1d1f27 transparent;
+        }
+        .envelope::after {
+            bottom: 0;
+            left: 0;
+            border-width: 60px 100px 0 100px;
+            border-color: #1d1f27 transparent transparent transparent;
+        }
+        .flag {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+        .envelope:hover .flag {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+        h1 {
+            position: absolute;
+            top: 10%;
+            text-align: center;
+            width: 100%;
+            color: white;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Congratulations, Hacker! 🎉</h1>
+    <div class="envelope">
+        <div class="flag">{{ flag }}</div>
+    </div>
+</body>
+</html>

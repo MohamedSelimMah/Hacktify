@@ -41,7 +41,8 @@ def login():
     conn.close()
 
     if result:
-        return "Login successful! FLAG{HDM_231jfel8_HACKTIFY}"
+        flag = "FLAG{SQLI_SUCCESS_123}"
+        return render_template('success.html', flag=flag)
     else:
         return "Login failed."
 
