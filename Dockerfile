@@ -1,11 +1,12 @@
+# Use an official Python image
 FROM python:3.11-slim
-#set working directory
+# Set working directory
 WORKDIR /app
-#copy files
+# Copy the current directory content into the container at /app
 COPY . .
-#install dependencies
+# Install the required libraries
 RUN pip install -r requirements.txt
-#exxpose Port
+# Expose the port
 EXPOSE 5000
-#run the app
-CMD["python","app.py"]
+# Run the Flask application
+CMD ["python", "app.py"]
