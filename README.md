@@ -3,7 +3,7 @@
 Welcome to **Hacktify** — a safe and sandboxed vulnerable web application designed for **learning ethical hacking**, **practicing cybersecurity skills**, and **blue/red team exercises**.  
 This project simulates real-world security flaws in a controlled environment and is fully documented with a YouTube walkthrough!
 
-[🎥 **YouTube Channel**:
+[🎥 **YouTube Channel**
 ](https://bit.ly/4d0x5WQ)
 
 ---
@@ -132,7 +132,7 @@ This will **bypass login authentication** if the SQL Injection succeeds — lead
 - How to capture hidden flags
 
 Will be uploaded to YouTube soon!  
-[**[Link:]**](https://bit.ly/4d0x5WQ)
+[**[Link]**](https://bit.ly/4d0x5WQ)
 
 ---
 
@@ -152,8 +152,8 @@ Steps:
 ## 🛡️ Created by
 
 Made with ❤️ for ethical hacking learners and future cybersecurity experts.  
-🔗 [[Your GitHub Profile] ](https://bit.ly/3EHjUxa) 
-🔗 [[[Your GitHub Profile] ]](https://github.com/RamezHas)
+🔗 [[MohamedSelimMahjoub] ](https://bit.ly/3EHjUxa) 
+🔗 [[[Ramez Hasenaoui] ]](https://github.com/RamezHas)
 🎥 [[Your YouTube Channel](https://bit.ly/4d0x5WQ)] 
 
 ---
