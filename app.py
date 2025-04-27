@@ -1,8 +1,28 @@
-from flask import Flask, request, render_template
+from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
+from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3
-
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your-secret-key-here'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///main.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+db = SQLAlchemy(app)
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
+
+class User(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    password_hash = db.Column(db.String(120), nullable=False)
+    score = db.Column(db.Integer, default=0)
+
+class Lab(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), nullable=False)
+    flag = db.Column(db.String(120), nullable=False)
+    points = db.Column(db.Integer, nullable=False)
 # Initialize the database
 def init_db():
     conn = sqlite3.connect('users.db')
@@ -20,12 +40,11 @@ def init_db():
     conn.close()
 
 init_db()
-
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('login')
 
-@app.route('/login', methods=['POST'])
+@app.route('/vulnerable_login', methods=['POST'])
 def login():
     username = request.form['username']
     password = request.form['password']
