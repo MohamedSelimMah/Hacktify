@@ -117,12 +117,6 @@ This will **bypass login authentication** if the SQL Injection succeeds — lead
 
 ---
 
-## 🖼️ Screenshots
-
-> (Add screenshots of login page, success page, flag capture, Docker run if you want!)
-
----
-
 ## 🎥 YouTube Documentation
 
 📺 A full walkthrough video explaining:
