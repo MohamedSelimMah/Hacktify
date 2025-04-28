@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacktify - Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="container">
+        <div class="header">
+            <h1>Create Your Hacktify Account</h1>
+            <p>Enter your details to join the most secure hacker platform!</p>
+        </div>
+        <form action="/register" method="POST" class="form">
+            <div class="input-container">
+                <input type="text" name="username" placeholder="Username" required class="input-field">
+                <input type="password" name="password" placeholder="Password" required class="input-field">
+            </div>
+
+            <button type="submit" class="submit-button">Register</button>
+        </form>
+
+        <p class="redirect">Already have an account? <a href="{{ url_for('login') }}" class="redirect-link">Login here.</a></p>
+    </div>
+</body>
+</html>
