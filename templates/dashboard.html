@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacktify - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome, {{ user[0] }}!</h2>
+        <p>Your current score: {{ user[1] }}</p>
+    <a href="{{ url_for('sql_lab') }}">
+        <button>Start SQL Injection Lab</button>
+    </a>
+
+    <a href="{{ url_for('logout') }}">
+        <button>Logout</button>
+        </a>
+    </div>
+</body>
+</html>
